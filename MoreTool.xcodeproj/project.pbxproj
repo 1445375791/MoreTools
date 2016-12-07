@@ -15,6 +15,17 @@
 		5F8605621DF7F5F8002657DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8605601DF7F5F8002657DB /* LaunchScreen.storyboard */; };
 		5F86056D1DF7F5F8002657DB /* MoreToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F86056C1DF7F5F8002657DB /* MoreToolTests.m */; };
 		5F8605781DF7F5F8002657DB /* MoreToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605771DF7F5F8002657DB /* MoreToolUITests.m */; };
+		5F8605AF1DF805EA002657DB /* IdiomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605AE1DF805EA002657DB /* IdiomViewController.m */; };
+		5F8605B21DF8075C002657DB /* QiWenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605B11DF8075C002657DB /* QiWenViewController.m */; };
+		5F8605B51DF80913002657DB /* XHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605B41DF80913002657DB /* XHViewController.m */; };
+		5F8605B81DF8092D002657DB /* XHTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605B71DF8092D002657DB /* XHTextViewController.m */; };
+		5F8605BB1DF80939002657DB /* XHPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605BA1DF80939002657DB /* XHPicViewController.m */; };
+		5F8605BE1DF80996002657DB /* WXJinxuanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605BD1DF80996002657DB /* WXJinxuanViewController.m */; };
+		5F8605C11DF809A2002657DB /* NJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605C01DF809A2002657DB /* NJViewController.m */; };
+		5F8605C41DF809AF002657DB /* MYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605C31DF809AF002657DB /* MYViewController.m */; };
+		5F8605C71DF809BB002657DB /* JJUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605C61DF809BB002657DB /* JJUViewController.m */; };
+		5F8605CA1DF809CD002657DB /* XWNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605C91DF809CD002657DB /* XWNewViewController.m */; };
+		5F8605CD1DF809DD002657DB /* JKaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8605CC1DF809DD002657DB /* JKaoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,30 @@
 		5F8605731DF7F5F8002657DB /* MoreToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoreToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8605771DF7F5F8002657DB /* MoreToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreToolUITests.m; sourceTree = "<group>"; };
 		5F8605791DF7F5F8002657DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F8605851DF7F79D002657DB /* MoreTool.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTool.pch; sourceTree = "<group>"; };
+		5F8605881DF7FCFB002657DB /* Configure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configure.h; sourceTree = "<group>"; };
+		5F8605AD1DF805EA002657DB /* IdiomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdiomViewController.h; sourceTree = "<group>"; };
+		5F8605AE1DF805EA002657DB /* IdiomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdiomViewController.m; sourceTree = "<group>"; };
+		5F8605B01DF8075C002657DB /* QiWenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiWenViewController.h; sourceTree = "<group>"; };
+		5F8605B11DF8075C002657DB /* QiWenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiWenViewController.m; sourceTree = "<group>"; };
+		5F8605B31DF80913002657DB /* XHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHViewController.h; sourceTree = "<group>"; };
+		5F8605B41DF80913002657DB /* XHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewController.m; sourceTree = "<group>"; };
+		5F8605B61DF8092D002657DB /* XHTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHTextViewController.h; sourceTree = "<group>"; };
+		5F8605B71DF8092D002657DB /* XHTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHTextViewController.m; sourceTree = "<group>"; };
+		5F8605B91DF80939002657DB /* XHPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPicViewController.h; sourceTree = "<group>"; };
+		5F8605BA1DF80939002657DB /* XHPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPicViewController.m; sourceTree = "<group>"; };
+		5F8605BC1DF80996002657DB /* WXJinxuanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXJinxuanViewController.h; sourceTree = "<group>"; };
+		5F8605BD1DF80996002657DB /* WXJinxuanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXJinxuanViewController.m; sourceTree = "<group>"; };
+		5F8605BF1DF809A2002657DB /* NJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJViewController.h; sourceTree = "<group>"; };
+		5F8605C01DF809A2002657DB /* NJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJViewController.m; sourceTree = "<group>"; };
+		5F8605C21DF809AF002657DB /* MYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYViewController.h; sourceTree = "<group>"; };
+		5F8605C31DF809AF002657DB /* MYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYViewController.m; sourceTree = "<group>"; };
+		5F8605C51DF809BB002657DB /* JJUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJUViewController.h; sourceTree = "<group>"; };
+		5F8605C61DF809BB002657DB /* JJUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJUViewController.m; sourceTree = "<group>"; };
+		5F8605C81DF809CD002657DB /* XWNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWNewViewController.h; sourceTree = "<group>"; };
+		5F8605C91DF809CD002657DB /* XWNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWNewViewController.m; sourceTree = "<group>"; };
+		5F8605CB1DF809DD002657DB /* JKaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKaoViewController.h; sourceTree = "<group>"; };
+		5F8605CC1DF809DD002657DB /* JKaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKaoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +136,7 @@
 		5F8605511DF7F5F8002657DB /* MoreTool */ = {
 			isa = PBXGroup;
 			children = (
+				5F8605861DF7F7DD002657DB /* Controllers */,
 				5F8605551DF7F5F8002657DB /* AppDelegate.h */,
 				5F8605561DF7F5F8002657DB /* AppDelegate.m */,
 				5F8605581DF7F5F8002657DB /* ViewController.h */,
@@ -118,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				5F8605531DF7F5F8002657DB /* main.m */,
+				5F8605851DF7F79D002657DB /* MoreTool.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +175,324 @@
 				5F8605791DF7F5F8002657DB /* Info.plist */,
 			);
 			path = MoreToolUITests;
+			sourceTree = "<group>";
+		};
+		5F8605861DF7F7DD002657DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605911DF80247002657DB /* jingju */,
+				5F8605951DF80247002657DB /* mingyan */,
+				5F8605991DF80247002657DB /* naojin */,
+				5F86059D1DF80247002657DB /* qiwen */,
+				5F8605A11DF80247002657DB /* weixin */,
+				5F8605A51DF80247002657DB /* xiaohua */,
+				5F8605A91DF80247002657DB /* xinwen */,
+				5F86058D1DF8023D002657DB /* jiakao */,
+				5F8605891DF80236002657DB /* chengyu */,
+				5F8605881DF7FCFB002657DB /* Configure.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5F8605891DF80236002657DB /* chengyu */ = {
+			isa = PBXGroup;
+			children = (
+				5F86058A1DF80236002657DB /* controller */,
+				5F86058B1DF80236002657DB /* model */,
+				5F86058C1DF80236002657DB /* view */,
+			);
+			path = chengyu;
+			sourceTree = "<group>";
+		};
+		5F86058A1DF80236002657DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605AD1DF805EA002657DB /* IdiomViewController.h */,
+				5F8605AE1DF805EA002657DB /* IdiomViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5F86058B1DF80236002657DB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5F86058C1DF80236002657DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5F86058D1DF8023D002657DB /* jiakao */ = {
+			isa = PBXGroup;
+			children = (
+				5F86058E1DF8023D002657DB /* controller */,
+				5F86058F1DF8023D002657DB /* model */,
+				5F8605901DF8023D002657DB /* view */,
+			);
+			path = jiakao;
+			sourceTree = "<group>";
+		};
+		5F86058E1DF8023D002657DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605CB1DF809DD002657DB /* JKaoViewController.h */,
+				5F8605CC1DF809DD002657DB /* JKaoViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5F86058F1DF8023D002657DB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5F8605901DF8023D002657DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5F8605911DF80247002657DB /* jingju */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605921DF80247002657DB /* controller */,
+				5F8605931DF80247002657DB /* model */,
+				5F8605941DF80247002657DB /* view */,
+			);
+			path = jingju;
+			sourceTree = "<group>";
+		};
+		5F8605921DF80247002657DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605C51DF809BB002657DB /* JJUViewController.h */,
+				5F8605C61DF809BB002657DB /* JJUViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5F8605931DF80247002657DB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5F8605941DF80247002657DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5F8605951DF80247002657DB /* mingyan */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605961DF80247002657DB /* controller */,
+				5F8605971DF80247002657DB /* model */,
+				5F8605981DF80247002657DB /* view */,
+			);
+			path = mingyan;
+			sourceTree = "<group>";
+		};
+		5F8605961DF80247002657DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605C21DF809AF002657DB /* MYViewController.h */,
+				5F8605C31DF809AF002657DB /* MYViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5F8605971DF80247002657DB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5F8605981DF80247002657DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5F8605991DF80247002657DB /* naojin */ = {
+			isa = PBXGroup;
+			children = (
+				5F86059A1DF80247002657DB /* controller */,
+				5F86059B1DF80247002657DB /* model */,
+				5F86059C1DF80247002657DB /* view */,
+			);
+			path = naojin;
+			sourceTree = "<group>";
+		};
+		5F86059A1DF80247002657DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605BF1DF809A2002657DB /* NJViewController.h */,
+				5F8605C01DF809A2002657DB /* NJViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5F86059B1DF80247002657DB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5F86059C1DF80247002657DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5F86059D1DF80247002657DB /* qiwen */ = {
+			isa = PBXGroup;
+			children = (
+				5F86059E1DF80247002657DB /* controller */,
+				5F86059F1DF80247002657DB /* model */,
+				5F8605A01DF80247002657DB /* view */,
+			);
+			path = qiwen;
+			sourceTree = "<group>";
+		};
+		5F86059E1DF80247002657DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605B01DF8075C002657DB /* QiWenViewController.h */,
+				5F8605B11DF8075C002657DB /* QiWenViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5F86059F1DF80247002657DB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5F8605A01DF80247002657DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5F8605A11DF80247002657DB /* weixin */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605A21DF80247002657DB /* controller */,
+				5F8605A31DF80247002657DB /* model */,
+				5F8605A41DF80247002657DB /* view */,
+			);
+			path = weixin;
+			sourceTree = "<group>";
+		};
+		5F8605A21DF80247002657DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605BC1DF80996002657DB /* WXJinxuanViewController.h */,
+				5F8605BD1DF80996002657DB /* WXJinxuanViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5F8605A31DF80247002657DB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5F8605A41DF80247002657DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5F8605A51DF80247002657DB /* xiaohua */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605A61DF80247002657DB /* controller */,
+				5F8605A71DF80247002657DB /* model */,
+				5F8605A81DF80247002657DB /* view */,
+			);
+			path = xiaohua;
+			sourceTree = "<group>";
+		};
+		5F8605A61DF80247002657DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605B31DF80913002657DB /* XHViewController.h */,
+				5F8605B41DF80913002657DB /* XHViewController.m */,
+				5F8605B61DF8092D002657DB /* XHTextViewController.h */,
+				5F8605B71DF8092D002657DB /* XHTextViewController.m */,
+				5F8605B91DF80939002657DB /* XHPicViewController.h */,
+				5F8605BA1DF80939002657DB /* XHPicViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5F8605A71DF80247002657DB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5F8605A81DF80247002657DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5F8605A91DF80247002657DB /* xinwen */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605AA1DF80247002657DB /* controller */,
+				5F8605AB1DF80247002657DB /* model */,
+				5F8605AC1DF80247002657DB /* view */,
+			);
+			path = xinwen;
+			sourceTree = "<group>";
+		};
+		5F8605AA1DF80247002657DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F8605C81DF809CD002657DB /* XWNewViewController.h */,
+				5F8605C91DF809CD002657DB /* XWNewViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5F8605AB1DF80247002657DB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5F8605AC1DF80247002657DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +629,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F86055A1DF7F5F8002657DB /* ViewController.m in Sources */,
+				5F8605B21DF8075C002657DB /* QiWenViewController.m in Sources */,
+				5F8605CA1DF809CD002657DB /* XWNewViewController.m in Sources */,
+				5F8605B51DF80913002657DB /* XHViewController.m in Sources */,
+				5F8605BE1DF80996002657DB /* WXJinxuanViewController.m in Sources */,
+				5F8605BB1DF80939002657DB /* XHPicViewController.m in Sources */,
+				5F8605AF1DF805EA002657DB /* IdiomViewController.m in Sources */,
+				5F8605CD1DF809DD002657DB /* JKaoViewController.m in Sources */,
+				5F8605C71DF809BB002657DB /* JJUViewController.m in Sources */,
 				5F8605571DF7F5F8002657DB /* AppDelegate.m in Sources */,
+				5F8605B81DF8092D002657DB /* XHTextViewController.m in Sources */,
+				5F8605C11DF809A2002657DB /* NJViewController.m in Sources */,
 				5F8605541DF7F5F8002657DB /* main.m in Sources */,
+				5F8605C41DF809AF002657DB /* MYViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +788,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MoreTool/MoreTool.pch";
 				INFOPLIST_FILE = MoreTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -434,6 +802,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MoreTool/MoreTool.pch";
 				INFOPLIST_FILE = MoreTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
