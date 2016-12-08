@@ -7,8 +7,16 @@
 //
 
 #import "XHTextViewController.h"
+#import "XHTextModel.h"
+#import "XHTextTableViewCell.h"
 
-@interface XHTextViewController ()
+@interface XHTextViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong)UITableView *tableView;
+
+@property (nonatomic, strong)NSMutableArray *dataArr;
+
+@property (nonatomic, assign) int currentPage;
 
 @end
 
@@ -17,7 +25,59 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor grayColor];
+    self.view.frame = CGRectMake(0, 0, MainScreenWidth, MainScreenHeight - 40);
+    _currentPage = 1;
+    _dataArr = [@[] mutableCopy];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, MainScreenWidth, self.view.bounds.size.height - 60) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.tableFooterView = [[UIView alloc] init];
+    _tableView.rowHeight = UITableViewAutomaticDimension;
+    _tableView.estimatedRowHeight = 80;
+    [self.view addSubview:_tableView];
+    [self getDataFromInter];
 }
+
+- (void)getDataFromInter {
+    [PPNetworkHelper GET:XIAOHUA_TXT_API parameters:@{@"page" : [NSNumber numberWithInt:self.currentPage]} responseCache:^(id responseCache) {
+        [self transformTheDicDataWithModel:responseCache];
+    } success:^(id responseObject) {
+        [self transformTheDicDataWithModel:responseObject];
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+- (void)transformTheDicDataWithModel:(id)response {
+    if ([response isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *bodyDic = response[@"showapi_res_body"];
+        self.currentPage = [bodyDic[@"currentPage"] intValue];
+        NSArray *contectList = bodyDic[@"contentlist"];
+        for (NSDictionary *dic in contectList) {
+            XHTextModel *model = [XHTextModel initTheModelWithDictionary:dic];
+            [self.dataArr addObject:model];
+        }
+        
+        [self.tableView reloadData];
+    }
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    XHTextTableViewCell *cell = [XHTextTableViewCell cellWithTableView:tableView];
+    XHTextModel *textModel = self.dataArr[indexPath.row];
+    [cell buildTheViewWithModel:textModel];
+    return cell;
+}
+
+
+#pragma mark - UITableViewDelegate
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

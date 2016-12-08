@@ -34,4 +34,9 @@
 
 #define TIYU_NEWS_API @"http://apis.baidu.com/txapi/tiyu/tiyu" //体育新闻
 
+
+#define MainScreenWidth [UIScreen mainScreen].bounds.size.width
+#define MainScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
 #endif /* Configure_h */

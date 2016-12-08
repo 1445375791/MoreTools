@@ -7,8 +7,15 @@
 //
 
 #import "XHPicViewController.h"
+#import "XHPicModel.h"
+#import "XHPicTableViewCell.h"
+@interface XHPicViewController ()<UITableViewDelegate, UITableViewDataSource>
 
-@interface XHPicViewController ()
+@property (nonatomic, strong)UITableView *tableView;
+
+@property (nonatomic, strong)NSMutableArray *dataArr;
+
+@property (nonatomic, assign) int currentPage;
 
 @end
 
@@ -17,7 +24,59 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.frame = CGRectMake(0, 0, MainScreenWidth, MainScreenHeight - 40);
+    _currentPage = 1;
+    _dataArr = [@[] mutableCopy];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, MainScreenWidth, self.view.bounds.size.height - 64) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.tableFooterView = [[UIView alloc] init];
+    _tableView.estimatedRowHeight = 80;
+    _tableView.rowHeight = UITableViewAutomaticDimension;
+    [self.view addSubview:_tableView];
+    [self getDataFromInter];
 }
+
+- (void)getDataFromInter {
+    [PPNetworkHelper GET:XIAOHUA_PIC_API parameters:@{@"page" : [NSNumber numberWithInt:self.currentPage]} responseCache:^(id responseCache) {
+        [self transformTheDicDataWithModel:responseCache];
+    } success:^(id responseObject) {
+        [self transformTheDicDataWithModel:responseObject];
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+- (void)transformTheDicDataWithModel:(id)response {
+    if ([response isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *bodyDic = response[@"showapi_res_body"];
+        self.currentPage = [bodyDic[@"currentPage"] intValue];
+        NSArray *contectList = bodyDic[@"contentlist"];
+        for (NSDictionary *dic in contectList) {
+            XHPicModel *model = [XHPicModel initTheModelWithDic:dic];
+            [self.dataArr addObject:model];
+        }
+        
+        [self.tableView reloadData];
+    }
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    XHPicTableViewCell *cell = [XHPicTableViewCell cellWithTableView:tableView];
+    XHPicModel *picModel = self.dataArr[indexPath.row];
+    [cell buildTheViewWithModel:picModel];
+    return cell;
+}
+
+
+#pragma mark - UITableViewDelegate
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

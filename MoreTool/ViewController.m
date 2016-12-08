@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "XHViewController.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong)UITableView *tableView;
@@ -53,7 +53,10 @@
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if (indexPath.row == 3) {
+        XHViewController *xhVC = [[XHViewController alloc] init];
+        [self.navigationController pushViewController:xhVC animated:YES];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
