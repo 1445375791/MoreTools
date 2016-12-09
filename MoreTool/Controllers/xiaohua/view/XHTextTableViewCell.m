@@ -26,6 +26,8 @@
 
 - (void)buildTheViewWithModel:(XHTextModel *)model {
     self.titleLabel.text = model.titleStr;
+    [DealTheDataForLabel label:self.contextLabel contentForHtmlString:model.context];
+//    self.contextLabel.text = model.context;
     self.ctimeLabel.text = model.ctime;
 }
 

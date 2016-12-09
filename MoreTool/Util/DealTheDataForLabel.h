@@ -20,4 +20,6 @@
  */
 + (void)labelContentForHtmlStringLineAttrabuteText:(UILabel *)label content:(NSString *)content contentWidth:(CGFloat)width font:(UIFont *)font lineSpace:(CGFloat)linespace;
 
++ (void)label:(UILabel *)label contentForHtmlString:(NSString *)content;
+
 @end

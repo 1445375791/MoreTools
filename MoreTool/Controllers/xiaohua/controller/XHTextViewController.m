@@ -18,6 +18,10 @@
 
 @property (nonatomic, assign) int currentPage;
 
+@property (nonatomic, strong) NSMutableDictionary *cellHeightDic, *cellCacheDic;
+
+
+
 @end
 
 @implementation XHTextViewController
@@ -29,6 +33,7 @@
     self.view.frame = CGRectMake(0, 0, MainScreenWidth, MainScreenHeight - 40);
     _currentPage = 1;
     _dataArr = [@[] mutableCopy];
+    _cellHeightDic = [NSMutableDictionary dictionaryWithCapacity:0];
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, MainScreenWidth, self.view.bounds.size.height - 60) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -69,7 +74,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XHTextTableViewCell *cell = [XHTextTableViewCell cellWithTableView:tableView];
+    XHTextTableViewCell *cell  = [XHTextTableViewCell cellWithTableView:tableView];
     XHTextModel *textModel = self.dataArr[indexPath.row];
     [cell buildTheViewWithModel:textModel];
     return cell;
@@ -77,6 +82,21 @@
 
 
 #pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSNumber *cellHeight = [self.cellHeightDic objectForKey:[NSString stringWithFormat:@"%@", indexPath]];
+    if (cellHeight) {
+        return cellHeight.floatValue;
+    }else {
+        return 80;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSNumber *cellHeight = [NSNumber numberWithFloat:cell.frame.size.height];
+    [self.cellHeightDic setValue:cellHeight forKey:[NSString stringWithFormat:@"%@", indexPath]];
+}
 
 
 - (void)didReceiveMemoryWarning {

@@ -14,23 +14,28 @@
     
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithData:[content dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType } documentAttributes:nil error:nil];
         // 设置行间距
-    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+//    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+//    
+//    if (!linespace) {
+//        linespace = 5;
+//    }
+//    
+//    paragraph.lineSpacing = linespace;
+//    [attrStr addAttributes:@{NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraph, NSForegroundColorAttributeName : [UIColor darkTextColor]} range:NSMakeRange(0, attrStr.length)];
     
-    if (!linespace) {
-        linespace = 5;
-    }
-    
-    paragraph.lineSpacing = linespace;
-    [attrStr addAttributes:@{NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraph, NSForegroundColorAttributeName : [UIColor darkTextColor]} range:NSMakeRange(0, attrStr.length)];
-    
-    NSDictionary *dic = @{NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraph};
-    
-    CGFloat labelHeight = [content boundingRectWithSize:CGSizeMake(width, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil].size.height;
-    
-        // 改变label的frame
-    CGRect tempRect = label.frame;
-    tempRect.size.height = labelHeight;
-    label.frame = tempRect;
+//    NSDictionary *dic = @{NSFontAttributeName : font, NSParagraphStyleAttributeName : paragraph};
+//    
+//    CGFloat labelHeight = [content boundingRectWithSize:CGSizeMake(width, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil].size.height;
+//    
+//        // 改变label的frame
+//    CGRect tempRect = label.frame;
+//    tempRect.size.height = labelHeight;
+//    label.frame = tempRect;
+    label.attributedText = attrStr;
+}
+
++ (void)label:(UILabel *)label contentForHtmlString:(NSString *)content {
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithData:[content dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType } documentAttributes:nil error:nil];
     label.attributedText = attrStr;
 }
 
